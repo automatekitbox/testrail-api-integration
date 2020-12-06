@@ -47,7 +47,7 @@ const {CucumberRailClient} = require ("testrail-integration");
 
 //username, password, url, runid and version can be passed from .env or config or property file
 
-//Below code you can keep it in Before All hook
+
 const options = {
   username: "test@gmail.com",
   password: "pwd123,
@@ -55,7 +55,10 @@ const options = {
 };
 const testrail = new CucumberRailClient(options);
 
-//Below code , just added flag with or without testrail
+
+
+//Below code can be used in hooks 
+// you can use below code in cofnfig file of webdriverio and protractor with cucumber framework
 After({timeout: 100 * 3000}, async (scenario) => {
   
     try {
