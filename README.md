@@ -70,3 +70,19 @@ After({timeout: 100 * 3000}, async (scenario) => {
 });
 
 ```
+
+## WebdriverIO. Cucumber
+config.ts or config.js
+
+```js
+
+  afterScenario: (scenario: any) => {
+   
+     try {
+      await testrail.updateTestRailResults(scenario, runid, version);
+    } catch (err) {
+      console.log("Error " + err);
+    }
+  }
+  
+```
