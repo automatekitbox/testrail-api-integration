@@ -42,6 +42,9 @@ import {CucumberRailClient} from "testrail-integration";
 
 const {CucumberRailClient} = require ("testrail-integration");
 
+  const runid = 1;
+    const version = "Build 1.3.4"
+
 //username, password, url, runid and version can be passed from .env or config or property file
 
 //Below code you can keep it in Before All hook
@@ -56,16 +59,14 @@ const testrail = new CucumberRailClient(options);
 After({timeout: 100 * 3000}, async (scenario) => {
 
   console.log(`Scenario  ${scenario.result.status.toString()}`);
-  if (istestrailrun.includes("true")) {
-    const runid = 1;
-    const version = "Build 1.3.4"
+
+  
     try {
       await testrail.updateTestRailResults(scenario, runid, version);
     } catch (err) {
       console.log("Error " + err);
     }
 
-  }
 });
 
 ```
