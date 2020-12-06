@@ -57,9 +57,6 @@ const testrail = new CucumberRailClient(options);
 
 //Below code , just added flag with or without testrail
 After({timeout: 100 * 3000}, async (scenario) => {
-
-  console.log(`Scenario  ${scenario.result.status.toString()}`);
-
   
     try {
       await testrail.updateTestRailResults(scenario, runid, version);
