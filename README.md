@@ -76,7 +76,7 @@ config.ts or config.js
 
 ```js
 
-  afterScenario: (scenario: any) => {
+  afterScenario: async(scenario: any) => {
    
      try {
       await testrail.updateTestRailResults(scenario, runid, version);
