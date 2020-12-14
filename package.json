@@ -1,0 +1,62 @@
+{
+  "author": "Girma Nigusse <xgirma@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/e2e-boilerplate/protractor-commonjs-mocha-chai-expect/issues"
+  },
+  "dependencies": {
+    "chai": "4.2.0",
+    "mocha": "8.2.1",
+    "testrail-integration": "^0.1.7"
+  },
+  "description": "Protractor end-to-end test automation boilerplate. Using Commonjs, Mocha, Chai and Expect.",
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "3.1.4",
+    "husky": "4.3.0",
+    "lint-staged": "10.5.1",
+    "prettier": "2.1.2",
+    "pretty-quick": "3.1.0"
+  },
+  "homepage": "https://github.com/e2e-boilerplate/protractor-commonjs-mocha-chai-expect#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --allow-empty"
+    }
+  },
+  "keywords": [
+    "chai",
+    "commonjs",
+    "expect",
+    "mocha",
+    "protractor",
+    "protractor automation",
+    "protractor boilerplate",
+    "protractor example",
+    "e2e",
+    "e2e tests",
+    "boilerplate",
+    "integration test",
+    "test automation",
+    "javascript"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "name": "protractor-commonjs-mocha-chai-expect",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2e-boilerplate/protractor-commonjs-mocha-chai-expect.git"
+  },
+  "scripts": {
+    "lint": "npx eslint --ext .js ./ --fix",
+    "test": "npx mocha test/mymocha.spec.js"
+  },
+  "version": "1.0.0"
+}
