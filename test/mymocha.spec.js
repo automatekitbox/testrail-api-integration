@@ -14,8 +14,8 @@ describe("jsonValidationUtils", () => {
   describe("prettyPrintJSON", () => {
     it("should return formatted JSON", async () => {
       const options = {
-        username: "krishna01012002@gmail.com",
-        password: "Venkat@1234",
+        username: "ktest@gmail.com",
+        password: "pwd@1234",
         url: "https://inc2.testrail.io",
       };
       const client = new TestRailClient(options);
